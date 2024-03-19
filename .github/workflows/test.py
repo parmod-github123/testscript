@@ -3,9 +3,11 @@ import pysftp
 def main():
   print("Hello there")
   token = os.environ.get("TOKEN")
-  print(token)
-  srv = pysftp.Connection(host="your_FTP_server", username="your_username",
-  password="your_password")
+  if not token:
+    print("token is not defined")
+  else
+    print("token is good")
+  
 
 if __name__ == '__main__':
   main()
