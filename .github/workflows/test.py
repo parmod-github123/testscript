@@ -5,7 +5,7 @@ def main():
   token = os.environ.get("TOKEN")
   if not token:
     print("token is not defined")
-  else
+  else:
     print("token is good")
   
 
