@@ -1,3 +1,4 @@
+import os
 def main():
   print("Hello there")
   token = os.environ.get("TOKEN")
