@@ -3,7 +3,8 @@
 name: Running ssh
 
 # Controls when the workflow will run
-workflow_dispatch:  # Manual trigger
+on:
+  workflow_dispatch:  # Manual trigger
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
