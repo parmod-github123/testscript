@@ -26,5 +26,5 @@ jobs:
           remote-user: ${{ secrets.SFTP_USERNAME }}
           ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           remote-path: "/var/www/test_automation"
-          sync: "full"
+          sync: 'full'
      
