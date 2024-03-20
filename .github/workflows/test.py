@@ -9,12 +9,13 @@ def main():
     print("token is not defined")
   else:
     print("token is good")
+    srv = pysftp.Connection(host=hostname, username=user, private_key=token)
+    print("connection established successfully")
+    srv.close()
   
 # handling sftp connection for file deletion
 
-srv = pysftp.Connection(host=hostname, username=user, private_key=token)
-print("connection established successfully")
-srv.close()
+
 
 
 # https://www.datacourses.com/deleting-files-on-sftp-server-2469/
