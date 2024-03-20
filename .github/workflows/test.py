@@ -3,12 +3,18 @@ import pysftp
 def main():
   print("Hello there")
   token = os.environ.get("TOKEN")
+  hostname = os.environ.get("HOST")
+  user = os.environ.get("USERNAME")
   if not token:
     print("token is not defined")
   else:
     print("token is good")
   
 # handling sftp connection for file deletion
+
+srv = pysftp.Connection(host=hostname, username=user, private_key=token)
+print("connection established successfully")
+
 
 # https://www.datacourses.com/deleting-files-on-sftp-server-2469/
 
