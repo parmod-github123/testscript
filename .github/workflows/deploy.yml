@@ -26,9 +26,8 @@ jobs:
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: "sftp"
+          sync: 'full'
           remote-host: ${{ secrets.SFTP_SERVER }}
           remote-user: ${{ secrets.SFTP_USERNAME }}
           ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           remote-path: "/var/www/test_automation"
-          sync: 'full'
-     
