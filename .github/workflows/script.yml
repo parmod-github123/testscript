@@ -32,5 +32,7 @@ jobs:
       - name: Run a python script
       
         env:
-          TOKEN: ${{secrets.TOKEN_DEV}}
+          TOKEN: ${{secrets.DEPLOY_PRIVATE_KEY}}
+          HOST: ${{secrets.SFTP_SERVER}}
+          USERNAME: ${{secrets.SFTP_USERNAME}}
         run: python .github/workflows/test.py
