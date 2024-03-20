@@ -14,6 +14,7 @@ def main():
 
 srv = pysftp.Connection(host=hostname, username=user, private_key=token)
 print("connection established successfully")
+srv.close()
 
 
 # https://www.datacourses.com/deleting-files-on-sftp-server-2469/
